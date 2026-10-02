@@ -51,6 +51,8 @@ pi -e ./src/index.ts
 
 Requires pi **0.84.0 or newer**: the [`SubagentWorkflow`](#subagentworkflow) tool builds on `constrainedSampling` (pi 0.82.0) and pi-tui's `stripTerminalSequences` (0.84.0). The `peerDependencies` range declares it, so npm flags an older pi at install time.
 
+Pi supplies `@sinclair/typebox` and `typebox` at runtime. Both are declared as `"*"` peers, with local development copies in `devDependencies`, so managed installs use the host's modules rather than installing extension-owned copies.
+
 ### Other hosts
 
 This extension is developed and tested against [pi](https://pi.dev).
